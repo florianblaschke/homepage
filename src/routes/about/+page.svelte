@@ -81,11 +81,9 @@
 		<div class="md:col-span-1">
 			<div class="sticky top-20">
 				<div class="mb-6 aspect-square overflow-hidden rounded-md">
-					<img
-						src="https://utfs.io/f/KCC3bUkGRI6aa0C2OZYmkcMtRNuXEJeWDIQK8Z0UiFdaGwvo"
+					<enhanced:img
+						src="/static/florian_blaschke.webp"
 						alt="Profile"
-						width={400}
-						height={600}
 						class="-translate-y-10 object-cover"
 					/>
 				</div>
