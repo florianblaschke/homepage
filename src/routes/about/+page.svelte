@@ -5,6 +5,11 @@
 
 	const education: { title: string; org: string; timerange: string }[] = [
 		{
+			title: 'Computer Systems – A Programmer’s Perspective',
+			org: 'Bryant, O’Hallaron',
+			timerange: '10/2025'
+		},
+		{
 			title: 'Advanced React with Typescript',
 			org: 'TotalTypescript',
 			timerange: '07/2025–09/2025'
@@ -44,20 +49,19 @@
 
 	const experience: {
 		title: string;
-		description: string;
+		description?: string;
 		company: string;
 		timerange: string;
 	}[] = [
 		{
 			title: 'Developer',
-			description:
-				'Building custom tracking dashboards and enabling end-to-end tracking for larger customers. Reducing codebase deployment time by up to 75% through monorepo migration. Built and maintain a full-stack application for employee management.',
+			description: '',
 			company: 'for suxess',
 			timerange: '01/2024–present'
 		}
 	];
 
-	const tools: string[] = ['next.js', 'react', 'prisma', 'drizzle', 'tailwind', 'trpc'];
+	const tools: string[] = ['next.js', 'react', 'svelte', 'prisma', 'drizzle', 'tailwind', 'trpc'];
 	const skills: string[] = [
 		'typescript',
 		'mongodb',
@@ -122,6 +126,12 @@
 					for major clients, refining my skills in building scalable and efficient applications. Always
 					learning – always improving.
 				</p>
+				<p class="text-muted-foreground">
+					Lately, I’ve started diving into the
+					<a href="https://teachyourselfcs.com" class="underline" target="_blank" rel="noopener"
+						>Teach yourself CS</a
+					> path to strengthen my computer science foundation.
+				</p>
 			</section>
 
 			<Separator />
@@ -163,9 +173,11 @@
 									{exp.timerange}
 								</span>
 							</div>
-							<p class="text-sm text-muted-foreground">
-								{exp.description}
-							</p>
+							{#if exp.description}
+								<p class="text-sm text-muted-foreground">
+									{exp.description}
+								</p>
+							{/if}
 						</div>
 					{/each}
 				</div>
