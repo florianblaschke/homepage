@@ -42,7 +42,7 @@
 		<div class="md:col-span-1">
 			<div class="sticky top-20">
 				<div class="mb-6 aspect-square overflow-hidden rounded-md">
-					<enhanced:img src="/static/florian_blaschke.jpeg" alt="Profile" class="object-cover" />
+					<enhanced:img src="/static/florian_blaschke.webp" alt="Profile" class="object-cover" />
 				</div>
 
 				<div class="space-y-4">
