@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Separator } from '$lib/components/ui/separator';
-	import { Github, Linkedin } from '@lucide/svelte';
 	import { formatDistanceToNow } from 'date-fns';
 
 	const experience: {
@@ -55,7 +54,6 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Github class="mr-2 h-4 w-4" />
 							GitHub
 						</a>
 						<a
@@ -64,7 +62,6 @@
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Linkedin class="mr-2 h-4 w-4" />
 							LinkedIn
 						</a>
 					</div>

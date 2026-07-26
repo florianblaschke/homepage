@@ -2,3 +2,7 @@ allowBuilds:
   '@tailwindcss/oxide': true
   esbuild: true
   sharp: false
+minimumReleaseAgeExclude:
+  - '@lucide/svelte@1.27.0'
+  - globals@17.8.0
+  - tailwind-variants@3.3.0
