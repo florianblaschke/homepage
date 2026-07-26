@@ -3,50 +3,6 @@
 	import { Github, Linkedin } from '@lucide/svelte';
 	import { formatDistanceToNow } from 'date-fns';
 
-	const education: { title: string; org: string; timerange: string }[] = [
-		{
-			title: 'Computer Systems – A Programmer’s Perspective',
-			org: 'Bryant, O’Hallaron',
-			timerange: '10/2025'
-		},
-		{
-			title: 'Advanced React with Typescript',
-			org: 'TotalTypescript',
-			timerange: '07/2025–09/2025'
-		},
-		{
-			title: 'Advanced Typescript Patterns',
-			org: 'TotalTypescript',
-			timerange: '03/2025–07/2025'
-		},
-		{
-			title: 'Design Patterns – Elements of Reusable Object-Oriented Software',
-			org: 'Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides',
-			timerange: '03/2025'
-		},
-		{ title: 'System Design Interview', org: 'Alex Xu', timerange: '03/2025' },
-		{
-			title: 'Generics',
-			org: 'TotalTypescript',
-			timerange: '01/2025–03/2025'
-		},
-		{
-			title: 'Pro Essentials',
-			org: 'TotalTypescript',
-			timerange: '09/2024–12/2024'
-		},
-		{
-			title: 'Type Transformations',
-			org: 'TotalTypescript',
-			timerange: '07/2024–08/2024'
-		},
-		{
-			title: 'WebDevelopment',
-			org: 'neue fische',
-			timerange: '03/2023–09/2023'
-		}
-	];
-
 	const experience: {
 		title: string;
 		description?: string;
@@ -61,14 +17,16 @@
 		}
 	];
 
-	const tools: string[] = ['next.js', 'react', 'svelte', 'prisma', 'drizzle', 'tailwind', 'trpc'];
-	const skills: string[] = [
+	const knowledge: string[] = [
+		'go',
+		'rust',
 		'typescript',
+		'sql',
 		'mongodb',
 		'node',
-		'postgresql',
-		'git',
-		'rust (learning)'
+		'aws',
+		'google cloud',
+		'docker'
 	];
 
 	const date = new Date(2024, 0, 1);
@@ -85,11 +43,7 @@
 		<div class="md:col-span-1">
 			<div class="sticky top-20">
 				<div class="mb-6 aspect-square overflow-hidden rounded-md">
-					<enhanced:img
-						src="/static/florian_blaschke.webp"
-						alt="Profile"
-						class="-translate-y-10 object-cover"
-					/>
+					<enhanced:img src="/static/florian_blaschke.jpeg" alt="Profile" class="object-cover" />
 				</div>
 
 				<div class="space-y-4">
@@ -121,41 +75,30 @@
 		<div class="space-y-12 md:col-span-2">
 			<section class="space-y-4">
 				<p class="text-muted-foreground">
-					I’m a Developer from Germany with {codingSince} of experience, specializing in TypeScript and
-					React. While I’m still early in my journey, I’ve had the opportunity to work on larger projects
-					for major clients, refining my skills in building scalable and efficient applications. Always
-					learning – always improving.
+					I’m a Developer from Germany with {codingSince} of experience. Currently I am working mostly
+					with Go building a scalable infrastructure for job imports at
+					<a href="https://forsuxess.de" class="underline" target="_blank" rel="noopener"
+						>forsuxess.</a
+					> In my spare time I try to dig a bit deeper into databases.
 				</p>
+
 				<p class="text-muted-foreground">
-					Lately, I’ve started diving into the
+					I’ve started diving into the
 					<a href="https://teachyourselfcs.com" class="underline" target="_blank" rel="noopener"
 						>Teach yourself CS</a
-					> path to strengthen my computer science foundation.
+					> path to strengthen my computer science foundation and I still like typing…
 				</p>
 			</section>
 
 			<Separator />
 
 			<section class="space-y-4">
-				<h2 class="text-2xl font-bold">Expertise</h2>
-				<div class="grid gap-6 sm:grid-cols-2">
-					<div class="space-y-2">
-						<h3 class="text-lg font-bold">Tools</h3>
-						<ul class="space-y-1 text-sm text-muted-foreground">
-							{#each tools as tool (tool)}
-								<li>{tool}</li>
-							{/each}
-						</ul>
-					</div>
-					<div class="space-y-2">
-						<h3 class="text-lg font-bold">Skills</h3>
-						<ul class="space-y-1 text-sm text-muted-foreground">
-							{#each skills as skill (skill)}
-								<li>{skill}</li>
-							{/each}
-						</ul>
-					</div>
-				</div>
+				<h2 class="text-2xl font-bold">Things I know or used in no particular order</h2>
+				<ul class="flex flex-wrap gap-2 space-y-1 text-sm text-muted-foreground">
+					{#each knowledge as tool (tool)}
+						<li>{tool}</li>
+					{/each}
+				</ul>
 			</section>
 
 			<Separator />
@@ -181,25 +124,6 @@
 						</div>
 					{/each}
 				</div>
-			</section>
-
-			<Separator />
-
-			<section class="space-y-4">
-				<h2 class="text-2xl font-bold">Education</h2>
-				{#each education as step (step)}
-					<div class="space-y-2">
-						<div class="flex items-start justify-between">
-							<h3 class="max-w-3/4 text-lg font-bold">{step.title}</h3>
-							<span class=" text-sm text-muted-foreground">
-								{step.timerange}
-							</span>
-						</div>
-						<p class=" text-sm text-muted-foreground">
-							{step.org}
-						</p>
-					</div>
-				{/each}
 			</section>
 		</div>
 	</div>
